@@ -4,6 +4,6 @@ from . import views
 
 app_name = 'kronFrame'
 urlpatterns = [
-	url(r'^$', views.IndexView.as_view(), name='index'),
-	url(r'^home/', views.HomeView.as_view(), name='home'),
+	url(r'^inDev/', views.IndexView.as_view(), name='index'),
+	url(r'^$', views.HomeView.as_view(), name='home'),
 ]

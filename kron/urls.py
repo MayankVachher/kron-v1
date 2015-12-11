@@ -19,5 +19,5 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^kron/', include('kronFrame.urls')),
+    url(r'', include('kronFrame.urls')),
 ]

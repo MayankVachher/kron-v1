@@ -106,3 +106,13 @@ TD {
 	text-align: center;
 	font-weight: bold;
 }
+.footer {
+	text-align: right;
+	font-size: 12px;
+	height: 30px;
+	background-color: #00B0F0;
+}
+.footer-text {
+	padding-right: 20px;
+	padding-top: 8px;
+}
