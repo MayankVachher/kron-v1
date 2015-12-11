@@ -1,0 +1,62 @@
+<div class='wrap-above'>
+	<div class='wrapper-select'>
+		<div class='wrapper'>
+			<div class='colorbox1'></div>
+			<div class='subject'>Subject1</div>
+		</div>
+		<select name="Subject1" id="Sub1" onchange="noticeChange('Sub1',1)">
+			<option name="subj1_null">-----</option>
+		{% for choice in dataSet.choice %}
+		    <option name="subj1_{{ choice }}">{{ choice }}</option>
+		{% endfor %}
+		</select>
+	</div>
+	<div class='wrapper-select'>
+		<div class='wrapper'>
+			<div class='colorbox2'></div>
+			<div class='subject'>Subject2</div>
+		</div>
+		<select name="Subject2" id="Sub2" onchange="noticeChange('Sub2',2)">
+			<option name="subj2_null">-----</option>
+		{% for choice in dataSet.choice %}
+		    <option name="subj2_{{ choice }}">{{ choice }}</option>
+		{% endfor %}
+		</select>
+	</div>
+	<div class='wrapper-select'>
+		<div class='wrapper'>
+			<div class='colorbox3'></div>
+			<div class='subject'>Subject3</div>
+		</div>
+		<select name="Subject3" id="Sub3" onchange="noticeChange('Sub3',3)">
+			<option name="subj3_null">-----</option>
+		{% for choice in dataSet.choice %}
+		    <option name="subj3_{{ choice }}">{{ choice }}</option>
+		{% endfor %}
+		</select>
+	</div>
+	<div class='wrapper-select'>
+		<div class='wrapper'>
+			<div class='colorbox4'></div>
+			<div class='subject'>Subject4</div>
+		</div>
+		<select name="Subject4" id="Sub4" onchange="noticeChange('Sub4',4)">
+			<option name="subj4_null">-----</option>
+		{% for choice in dataSet.choice %}
+		    <option name="subj4_{{ choice }}">{{ choice }}</option>
+		{% endfor %}
+		</select>
+	</div>
+	<div class='wrapper-select'>
+		<div class='wrapper'>
+			<div class='colorbox5'></div>
+			<div class='subject'>Subject5</div>
+		</div>
+		<select name="Subject5" id="Sub5" onchange="noticeChange('Sub5',5)">
+			<option name="subj5_null">-----</option>
+		{% for choice in dataSet.choice %}
+		    <option name="subj5_{{ choice }}">{{ choice }}</option>
+		{% endfor %}
+		</select>
+	</div>
+</div>

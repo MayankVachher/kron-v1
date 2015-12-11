@@ -1,0 +1,45 @@
+{% load staticfiles %}
+<html>
+	<head>
+		<title>Kron</title>
+		<link rel="stylesheet" href="{% static 'kronFrame/bootstrap.min.css' %}">
+		<link rel="stylesheet" href="{% static 'kronFrame/bootstrap-theme.min.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'kronFrame/style.css' %}" />
+	</head>
+	<body>
+		<div class="header">
+			<div class="name">KRON</div>
+		</div>
+		<div class="table-container">
+			<TABLE class="TimeTable">
+				<TR>
+					{% for timer in dataSet.times %}
+					<TH>{{ timer }}</TH>
+					{% endfor %}
+				</TR>
+				{% for day, day_objs in dataSet.table.items %}
+				<TR>
+					<!--<TD>{{ dataSet.ourDays.day }}</TD> -->
+					<TD class="dayskis">{{ day }}</TD>
+					{% for slot, slot_obj in day_objs.items %}
+					<TD>
+						{% if slot_obj %}
+							{% for cour in slot_obj %}
+								<div class = "{{ cour.course }}">{{ cour.course }}</div>
+							{% endfor %}
+						{% else %}
+							<div></div>
+						{% endif %}
+					</TD>
+					{% endfor %}
+				</TR>
+				{% endfor %}
+			</TABLE>
+		</div>
+		<div class="selection">
+			{% include "kronFrame/selectCourses.html" with dataSet=dataSet only %}
+		</div>
+
+		<script type="text/javascript" src="{% static 'kronFrame/courseClash.js' %}"></script>
+	</body>
+</html>

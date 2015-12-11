@@ -1,0 +1,108 @@
+body {
+	background: #fdfdfd;
+}
+
+.header {
+	height: 50px;
+	background-color: #00B0F0;
+}
+
+.name {
+	text-align: right;
+	padding-top: 5px;
+	padding-right: 20px;
+	font-size: 28px;
+}
+
+.selection {
+	margin-top: 8vh;
+	width: 100%;
+}
+
+.wrap-above {
+	margin: 0 auto;
+	width: 90%;
+}
+
+.selection select {
+	width: 15vw;
+	margin: 2vh;
+	font-size: 18px;
+}
+
+.subject {
+	text-align: left;
+	padding-left: 40px;
+	font-style: Arial;
+}
+
+.wrapper-select {
+	display: inline-block;
+}
+
+.colorbox1 {
+	float: left;
+	background-color: rgb(146, 208, 80);
+	height: 20px;
+	width: 20px;
+	margin-left: 15px;
+}
+.colorbox2 {
+	float: left;
+	background-color: rgb(255, 192, 0);
+	height: 20px;
+	width: 20px;
+	margin-left: 15px;
+}
+.colorbox3 {
+	float: left;
+	background-color: rgb(164, 205, 255);
+	height: 20px;
+	width: 20px;
+	margin-left: 15px;
+}
+.colorbox4 {
+	float: left;
+	background-color: rgb(255, 102, 102);
+	height: 20px;
+	width: 20px;
+	margin-left: 15px;
+}
+.colorbox5 {
+	float: left;
+	background-color: rgb(255, 102, 255);
+	height: 20px;
+	width: 20px;
+	margin-left: 15px;
+}
+.table-container {
+	display: inline-block;
+	margin-top: 1vh;
+	padding-left: 15px;
+}
+TABLE {
+	border-collapse: collapse;
+	width: 99vw;
+	table-layout: fixed;
+}
+TH {
+	height: 50px;
+	text-align: left;
+	font-size: 14px;
+	position: relative;
+	right: 20px;
+}
+TD {
+	border: 1px solid #000;
+	border-collapse: collapse;
+	height: 90px;
+	text-align: left;
+	padding:5px;
+	font-size: 11px;
+}
+.dayskis {
+	border: none;
+	font-size: 14px;
+	text-align: center;
+	font-weight: bold;
+}

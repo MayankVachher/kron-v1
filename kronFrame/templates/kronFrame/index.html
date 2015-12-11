@@ -1,0 +1,14 @@
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'kronFrame/style.css' %}" />
+Hey!
+{% if courseList %}
+    {% for course, compList in courseList.items %}
+    <ul>{{ course }}
+    	{% for sched in compList %}
+        <li>{{ sched.get_class_day_display }}: {{ sched.get_start_time_display }} to {{ sched.get_end_time_display }}</li>
+    	{% endfor %}
+    </ul>
+    {% endfor %}
+{% else %}
+    <p>No courses are available.</p>
+{% endif %}
