@@ -15,7 +15,7 @@ function noticeChange(Subj, j) {
 		if(vals[j-1] != null) {
 			if(vals.indexOf(userChoice) != -1 && userChoice != "-----") { // check if choice doesn't already exist or is no course
 				alert("You have already chosen that course!");
-				e.value = "-----";
+				e.value = vals[j-1];
 				vals[j-1] = "-----";
 			}
 			else if(userChoice == "-----") { // if user choice is no course
