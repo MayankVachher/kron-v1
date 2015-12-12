@@ -20,7 +20,7 @@
 					{% endfor %}
 				</TR>
 				{% for day, day_objs in dataSet.table.items %}
-				<TR>
+				<TR class='maintain-height'>
 					<!--<TD>{{ dataSet.ourDays.day }}</TD> -->
 					<TD class="dayskis">{{ day }}</TD>
 					{% for slot, slot_obj in day_objs.items %}

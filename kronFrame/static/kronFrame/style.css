@@ -27,7 +27,7 @@ body {
 }
 
 .selection {
-	margin-top: 8vh;
+	margin-top: 3vh;
 	width: 100%;
 }
 
@@ -39,7 +39,9 @@ body {
 .selection select {
 	width: 15vw;
 	margin: 2vh;
-	font-size: 18px;
+	margin-top: 1vh;
+	margin-bottom: 1vh;
+	font-size: 14px;
 }
 
 .subject {
@@ -87,6 +89,41 @@ body {
 	width: 20px;
 	margin-left: 15px;
 }
+.colorbox6 {
+	float: left;
+	background-color: rgb(255, 102, 153);
+	height: 20px;
+	width: 20px;
+	margin-left: 15px;
+}
+.colorbox7 {
+	float: left;
+	background-color: rgb(204, 153, 204);
+	height: 20px;
+	width: 20px;
+	margin-left: 15px;
+}
+.colorbox8 {
+	float: left;
+	background-color: rgb(102, 204, 102);
+	height: 20px;
+	width: 20px;
+	margin-left: 15px;
+}
+.colorbox9 {
+	float: left;
+	background-color: rgb(255, 153, 153);
+	height: 20px;
+	width: 20px;
+	margin-left: 15px;
+}
+.colorbox10 {
+	float: left;
+	background-color: rgb(102, 153, 255);
+	height: 20px;
+	width: 20px;
+	margin-left: 15px;
+}
 .table-container {
 	display: inline-block;
 	margin-top: 1vh;
@@ -104,13 +141,16 @@ TH {
 	position: relative;
 	right: 20px;
 }
+.maintain-height {
+	height: 95px;
+}
 TD {
 	border: 1px solid #000;
 	border-collapse: collapse;
-	height: 90px;
 	text-align: left;
 	padding:5px;
 	font-size: 11px;
+	overflow-y: hidden;
 }
 .dayskis {
 	border: none;
@@ -121,7 +161,7 @@ TD {
 .footer {
 	text-align: right;
 	font-size: 12px;
-	height: 30px;
+	height: 33px;
 	background-color: #00B0F0;
 }
 .footer-text {

@@ -1,8 +1,10 @@
-var vals = new Array(5); // stores user choices
-var color = ['rgb(146, 208, 80)', 'rgb(255, 192, 0)','rgb(164, 205, 255)','rgb(255, 102, 102)', 'rgb(255, 102, 255)'];
+var vals = new Array(10); // stores user choices
+var color = ['rgb(146, 208, 80)', 'rgb(255, 192, 0)','rgb(164, 205, 255)',
+'rgb(255, 102, 102)', 'rgb(255, 102, 255)', 'rgb(255, 102, 153)', 'rgb(204, 153, 204)', 'rgb(102, 204, 102)',
+'rgb(255, 153, 153)','rgb(102, 153, 255)'];
 getDefault();
 function getDefault() {
-	for(i = 1; i < 6; i++){
+	for(i = 1; i < 11; i++){
 		noticeChange("Sub"+i, i);
 		//console.log("Sub"+i);
 	}
