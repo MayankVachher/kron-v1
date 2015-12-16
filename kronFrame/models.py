@@ -5,7 +5,7 @@ from django.db import models
 # Create your models here.
 class Course(models.Model):
 	course_name = models.CharField(max_length=100)
-	course_ID = models.CharField(max_length=15)
+	course_ID = models.CharField(max_length=25)
 	course_acronym = models.CharField(max_length=10, primary_key=True)
 	CREDS = (
 		(2,'2 Credits'),
@@ -15,8 +15,15 @@ class Course(models.Model):
 	def __str__(self):
 		return self.course_acronym
 
+class CallSign(models.Model):
+	sign = models.CharField(max_length = 50, primary_key = True)
+	def __str__(self):
+		return self.sign
+
 class Offered(models.Model):
 	course = models.ForeignKey(Course, on_delete=models.CASCADE)
+	callSign = models.ManyToManyField(CallSign)
+	areaName = models.CharField(max_length=50)
 	DAYS = (
 		('Mon','Monday'),
 		('Tue','Tuesday'),

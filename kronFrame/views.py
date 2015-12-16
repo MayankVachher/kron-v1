@@ -23,8 +23,8 @@ class HomeView(generic.ListView):
 
 	def get_queryset(self):
 		dataSet = {}
-		dataSet['table'] = OrderedDict([('Mon',OrderedDict()),('Tue',OrderedDict()),('Wed',OrderedDict()),('Thu',OrderedDict()),('Fri',OrderedDict())])
-		dataSet['ourDays'] = dict([('Mon',"Monday"),('Tue',"Tuesday"),('Wed',"Wednesday"),('Thu',"Thursday"),('Fri',"Friday")])
+		dataSet['table'] = OrderedDict([('Mon',OrderedDict()),('Tue',OrderedDict()),('Wed',OrderedDict()),('Thu',OrderedDict()),('Fri',OrderedDict()),('Sat',OrderedDict())])
+		dataSet['ourDays'] = dict([('Mon',"Monday"),('Tue',"Tuesday"),('Wed',"Wednesday"),('Thu',"Thursday"),('Fri',"Friday"),('Sat',"Saturday")])
 		dataSet['choice'] = set()
 		dataSet['times'] = [" "]
 		for x in range(1,len(Offered.TIME_CHOICES)):
@@ -34,8 +34,12 @@ class HomeView(generic.ListView):
 				dataSet['table'][day][seg+2] = []
 		for x in Offered.objects.all():
 			for allSeg in range(int(x.start_time),int(x.end_time)):
-				dataSet['table'][x.class_day][allSeg].append(x)
-				dataSet['choice'].add(x.course.course_acronym)
+				if(x.course.course_acronym not in dataSet['table'][x.class_day][allSeg]):
+					x.woah = ""
+					for y in x.callSign.all():
+						dataSet['choice'].add(y.sign)
+						x.woah += y.sign+" "
+					dataSet['table'][x.class_day][allSeg].append(x)
 		dataSet['choice'] = sorted(list(dataSet['choice']))
 		pprint(dataSet['choice'])
 		return dataSet
