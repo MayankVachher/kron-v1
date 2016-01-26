@@ -57,5 +57,22 @@
 				document.body.innerHTML = originalContents;
 			}
 		</script>
+		<script type="text/javascript" src="{% static 'kronFrame/jQuery.js' %}"></script>
+		<script type="text/javascript" src="{% static 'kronFrame/html2Canvas.js' %}"></script>
+		<script type="text/javascript" src="{% static 'kronFrame/FileSaver.js' %}"></script>
+		<script type="text/javascript">
+		$(function() { 
+  			 $("#btnSave").click(function() { 
+    			html2canvas($("#widget"), {
+           			onrendered: function(canvas) {
+          		 		theCanvas = canvas;
+							canvas.toBlob(function(blob) {
+                    			saveAs(blob, "Dashboard.png"); 
+                				});
+           					}
+        				});
+    				});
+			});
+		</script>
 	</body>
 </html>
