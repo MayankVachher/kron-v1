@@ -12,7 +12,7 @@
 		<div class="header">
 			<div class="name">KRON</div>
 		</div>
-		<div class="table-container">
+		<div id="printableArea" class="table-container">
 			<TABLE class="TimeTable">
 				<TR>
 					{% for timer in dataSet.times %}
@@ -41,8 +41,21 @@
 		<div class="selection">
 			{% include "kronFrame/selectCourses.html" with dataSet=dataSet only %}
 		</div>
+		<div class="selection">
+			<input type="button" onclick="printDiv('printableArea')"/>
+		</div>
 		<div class="footer"><div class="footer-text">&copy; Mayank Vachher</div></div>
 
 		<script type="text/javascript" src="{% static 'kronFrame/courseClash.js' %}"></script>
+		<script>
+			function printDiv(divName) 
+			{
+     				var printContents = document.getElementById(divName).innerHTML;
+				var originalContents = document.body.innerHTML;
+				document.body.innerHTML = printContents;
+				window.print();
+				document.body.innerHTML = originalContents;
+			}
+		</script>
 	</body>
 </html>
