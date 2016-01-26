@@ -43,6 +43,7 @@
 		</div>
 		<div class="selection">
 			<input type="button" onclick="printDiv('printableArea')" value="Print"/>
+			<input type="button" id="btnSave" value="Save PNG"/>
 		</div>
 		<div class="footer"><div class="footer-text">&copy; Mayank Vachher</div></div>
 
@@ -62,13 +63,13 @@
 		<script type="text/javascript" src="{% static 'kronFrame/FileSaver.js' %}"></script>
 		<script type="text/javascript">
 		$(function() { 
-  			 $("#btnSave").click(function() { 
-    			html2canvas($("#widget"), {
-           			onrendered: function(canvas) {
-          		 		theCanvas = canvas;
-							canvas.toBlob(function(blob) {
-                    			saveAs(blob, "Dashboard.png"); 
-                				});
+  			 $("#btnSave").click(function() {
+  			 	html2canvas($("#printableArea"), {
+           				onrendered: function(canvas) {
+          		 			theCanvas = canvas;
+						canvas.toBlob(function(blob) {
+                    					saveAs(blob, "Dashboard.png"); 
+                					});
            					}
         				});
     				});
