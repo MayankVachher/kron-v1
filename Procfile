@@ -1,1 +1,0 @@
-web: gunicorn kron.wsgi --log-file -

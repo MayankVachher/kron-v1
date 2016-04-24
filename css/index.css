@@ -1,0 +1,30 @@
+#course-info {
+	background-color: transparent;
+	border: 0px;
+	height: auto;
+	box-shadow: none;
+	border-bottom: 2px solid;
+	border-bottom-color: white;
+}
+
+#course-info::-webkit-input-placeholder {
+  color: #ddd;
+}
+
+#course-info:-moz-placeholder {
+  color: #ddd;
+}
+
+#course-info::-moz-placeholder {
+  color: #ddd;
+}
+
+#course-info:-ms-input-placeholder {
+  color: #ddd;
+}
+
+#course-info-button {
+	height: auto;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
